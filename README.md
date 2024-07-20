@@ -4,9 +4,9 @@ This script allows you to download audio and/or video files from YouTube.
 ## Libraries
 Before running the script, make sure you have installed the following libraries:
 ```bash
-pip install ffmpeg pytube youtube-search-python tqdm validators
+pip install ffmpeg-python pytube youtube-search-python tqdm validators
 ```
-If you are using macOS, use the following command instead:
+If you are using macOS, use the following command instead of `pip install ffmpeg-python`:
 ```bash
 brew install ffmpeg
 ```
