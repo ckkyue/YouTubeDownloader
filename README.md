@@ -16,7 +16,7 @@ When running the script, you may encounter the following error:
 pytube.exceptions.RegexMatchError: get_throttling_function_name: could not find match for multiple
 ```
 This error occurs because YouTube made changes on its end, resulting in a regular expression filter mismatch in the `cipher.py` class of the pytube library. To resolve this issue, follow the steps below:
-1. Locate the `cipher.py` file. You can find it at a path similar to: `Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytube/cipher.py`.
+1. Locate the `cipher.py` file. You can find it at a path similar to: `file:///Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytube/cipher.py`.
 2. Find the following lines of code:
 ```bash
 r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
