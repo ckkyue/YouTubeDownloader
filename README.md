@@ -1,4 +1,4 @@
-# YouTube Downloader
+# YouTube_Downloader
 This script allows you to download audio and/or video files from YouTube.
 
 ## Libraries
