@@ -10,6 +10,25 @@ If you are using macOS, use the following command instead of `pip install ffmpeg
 ```bash
 brew install ffmpeg
 ```
+## Error Fix
+When running the script, you may encounter the following error:
+```bash
+pytube.exceptions.RegexMatchError: get_throttling_function_name: could not find match for multiple
+```
+This error occurs because YouTube made changes on its end, resulting in a regular expression filter mismatch in the `cipher.py` class of the pytube library. To resolve this issue, follow the steps below:
+1. Locate the `cipher.py` file.
+2. Find the following lines of code:
+```bash
+r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
+    r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)',
+```
+3. Replace those lines with the following code:
+```bash
+r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
+    r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])\([a-z]\)',
+```
+By making these changes, the error should be resolved, and the script should run without any issues.
+
 ## Usage
 To use the script, follow these steps:
 1. Edit the `querylist` variable in the `main()` function. This list should contain the YouTube search queries or URLs of the videos you want to download.
