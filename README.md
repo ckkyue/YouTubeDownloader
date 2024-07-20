@@ -10,7 +10,6 @@ If you are using macOS, use the following command instead of `pip install ffmpeg
 ```bash
 brew install ffmpeg
 ```
-
 ## Usage
 To use the script, follow these steps:
 1. Edit the `querylist` variable in the `main()` function. This list should contain the YouTube search queries or URLs of the videos you want to download.
@@ -25,3 +24,6 @@ To use the script, follow these steps:
 ## Notes
 - The script assumes that the YouTube videos you are downloading are not age-restricted.
 - The script may not work correctly if the YouTube videos are unavailable or have been removed.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
