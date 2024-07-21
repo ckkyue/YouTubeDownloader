@@ -92,7 +92,7 @@ def download_urls(need_video, max_res, urls, mp3=True):
                             key=get_resolution)
                 video_file = video.download()
                 base, ext = os.path.splitext(video_file)
-                video_file_int = base + "int" + ext
+                video_file_int = base + "_int" + ext
                 os.rename(video_file, video_file_int)
 
                 # Mix the video and audio files
@@ -118,7 +118,7 @@ def main():
     mp3 = True
 
     # Define the queries
-    querylist = ["有了你"]
+    querylist = [""]
 
     # Create a list of URLS from queries
     urls = create_urls(querylist, view_filter=view_filter, max_results=max_results)
