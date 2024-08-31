@@ -113,7 +113,7 @@ def main():
     # Variables
     view_filter = False
     max_results = 3
-    need_video = True
+    need_video = False
     max_res = 1080
     mp3 = True
 
